@@ -1,1 +1,27 @@
-Numpy is the numerical Python used for analysis of numbers.
+Numpy is the numerical Python for numerical computing in python.
+
+Here are some of the things you will find in Numpy.
+
+  1) ndarray : A efficient multidimentional array providing fast array-oriented arithmatic operation and flexiable broadcasting capability.
+  2) Mathmatical function for fast operation on entire array without having to write loops
+  3) Tools to reading/writing array data to the disc and working with memory-mapped files
+  4) Linear Algebra, random number generator and fourier transformation
+  5) A C API for connecting Numpy with liberaries written in C, C++ or FORTAN.
+
+
+
+* Compare numpy array with python array
+
+Code:
+	import numpy as np
+	my_arr = np.arange(100000)
+	my_list = list(range(100000))
+	
+	%time for _ in range(10): my_arr2 = my_arr * 2
+	%time for _ in range(10): my_list2 = [ x * 2 for x in my_list]
+	
+Output:
+	CPU times: user 1.68 ms, sys: 486 µs, total: 2.17 ms
+	Wall time: 1.76 ms
+	CPU times: user 75.6 ms, sys: 9.98 ms, total: 85.6 ms
+	Wall time: 86.4 ms
